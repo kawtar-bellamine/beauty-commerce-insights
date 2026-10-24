@@ -1,0 +1,2 @@
+Brazilian state boundaries simplified from click_that_hood (Code for America, MIT licence),
+https://github.com/codeforamerica/click_that_hood, itself derived from IBGE public data.

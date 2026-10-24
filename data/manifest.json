@@ -1,0 +1,38 @@
+{
+ "source": "https://github.com/olist/work-at-olist-data/tree/master/datasets",
+ "licence": "MIT (c) 2019 @olist",
+ "files": {
+  "olist_customers_dataset.csv": {
+   "sha256": "c26c17f59f3027a6a0dbeb8f1fa373c38f3323ecc84f225a8f4820e5bb288df8",
+   "bytes": 8562270
+  },
+  "olist_order_items_dataset.csv": {
+   "sha256": "4f6abdbbc94036d0df4a76fa0520c072e31a40119d70f7f370fba1e2285d2bcb",
+   "bytes": 15007623
+  },
+  "olist_order_payments_dataset.csv": {
+   "sha256": "61674868ed7b872aac3dcd95bf774448a88f6426b183f21be55f75af021ffdec",
+   "bytes": 5647783
+  },
+  "olist_order_reviews_dataset.csv": {
+   "sha256": "012b61c7593e34f51fa614efdf802b9c7056ce6aae5307ddb93236e7cfc797d7",
+   "bytes": 14451670
+  },
+  "olist_orders_dataset.csv": {
+   "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf",
+   "bytes": 17654914
+  },
+  "olist_products_dataset.csv": {
+   "sha256": "3e6569628a17fbc75fd206ee357b59e20364b9afa90f5b6cd5b4d624c58aa9cc",
+   "bytes": 2379446
+  },
+  "olist_sellers_dataset.csv": {
+   "sha256": "31eb9bd50d684526a78f2389413ce61841e97692de7b828fe7d956b534586312",
+   "bytes": 163589
+  },
+  "product_category_name_translation.csv": {
+   "sha256": "a81f0d1f27b27e7293f761bc79e3ce8f348ee39c4b3ed3e49bde38f478586278",
+   "bytes": 2613
+  }
+ }
+}

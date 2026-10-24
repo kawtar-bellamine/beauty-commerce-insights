@@ -1,0 +1,304 @@
+{
+ "data": {
+  "source": "Olist public e-commerce data (Brazil), MIT licence",
+  "orders": 99441,
+  "beauty_categories": [
+   "health_beauty",
+   "perfumery"
+  ]
+ },
+ "kpis": {
+  "beauty_orders": 11986,
+  "beauty_gmv_brl": 1652294.0,
+  "beauty_customers": 11776,
+  "beauty_avg_review": 4.19,
+  "beauty_late_pct": 8.6,
+  "beauty_share_of_marketplace_gmv_pct": 12.2
+ },
+ "data_quality": [
+  {
+   "check": "Q01",
+   "status": "PASS",
+   "rows_failing": 0,
+   "description": "Duplicate order ids"
+  },
+  {
+   "check": "Q02",
+   "status": "PASS",
+   "rows_failing": 0,
+   "description": "Order items pointing to an unknown order"
+  },
+  {
+   "check": "Q03",
+   "status": "PASS",
+   "rows_failing": 0,
+   "description": "Order items pointing to an unknown product"
+  },
+  {
+   "check": "Q04",
+   "status": "WARN",
+   "rows_failing": 610,
+   "description": "Products without a category"
+  },
+  {
+   "check": "Q05",
+   "status": "WARN",
+   "rows_failing": 2,
+   "description": "Categories missing from the English translation table"
+  },
+  {
+   "check": "Q06",
+   "status": "WARN",
+   "rows_failing": 547,
+   "description": "Orders with more than one review (latest kept)"
+  },
+  {
+   "check": "Q07",
+   "status": "WARN",
+   "rows_failing": 8,
+   "description": "Delivered orders without a delivery date"
+  },
+  {
+   "check": "Q08",
+   "status": "PASS",
+   "rows_failing": 0,
+   "description": "Delivered before being purchased"
+  },
+  {
+   "check": "Q09",
+   "status": "WARN",
+   "rows_failing": 1359,
+   "description": "Handed to the carrier before payment approval"
+  },
+  {
+   "check": "Q10",
+   "status": "WARN",
+   "rows_failing": 313,
+   "description": "Orders where payments differ from items + freight by more than 1 BRL"
+  },
+  {
+   "check": "Q11",
+   "status": "WARN",
+   "rows_failing": 1,
+   "description": "Orders without any payment record"
+  },
+  {
+   "check": "Q12",
+   "status": "PASS",
+   "rows_failing": 0,
+   "description": "Items with a non-positive price"
+  }
+ ],
+ "forecast": {
+  "series_end": "2018-08-23",
+  "horizon_days": 28,
+  "best_model": "gbm",
+  "scores": [
+   {
+    "model": "gbm",
+    "daily_wape_pct": 35.6,
+    "weekly_wape_pct": 24.9,
+    "bias_pct": -8.7
+   },
+   {
+    "model": "weekday_4w",
+    "daily_wape_pct": 39.7,
+    "weekly_wape_pct": 31.0,
+    "bias_pct": -12.3
+   },
+   {
+    "model": "ridge",
+    "daily_wape_pct": 42.5,
+    "weekly_wape_pct": 34.1,
+    "bias_pct": 30.1
+   },
+   {
+    "model": "naive_7d",
+    "daily_wape_pct": 50.9,
+    "weekly_wape_pct": 38.0,
+    "bias_pct": -13.0
+   }
+  ]
+ },
+ "review_risk": {
+  "train_orders": 7272,
+  "test_orders": 4394,
+  "test_bad_rate_pct": 9.2,
+  "logistic": {
+   "auc": 0.74,
+   "avg_precision": 0.323,
+   "bad_rate_in_top10_pct": 36.9,
+   "share_of_bad_reviews_caught_top10_pct": 40.0
+  },
+  "gbm": {
+   "auc": 0.713,
+   "avg_precision": 0.364,
+   "bad_rate_in_top10_pct": 39.0,
+   "share_of_bad_reviews_caught_top10_pct": 42.2
+  },
+  "best_model": "logistic"
+ },
+ "delivery_vs_reviews": [
+  {
+   "band": "7+ days early",
+   "orders": 8709,
+   "bad_review_pct": 7.5,
+   "avg_score": 4.41
+  },
+  {
+   "band": "0 to 7 days early",
+   "orders": 1981,
+   "bad_review_pct": 8.5,
+   "avg_score": 4.3
+  },
+  {
+   "band": "1 to 3 days late",
+   "orders": 303,
+   "bad_review_pct": 16.5,
+   "avg_score": 3.95
+  },
+  {
+   "band": "4 to 10 days late",
+   "orders": 386,
+   "bad_review_pct": 64.5,
+   "avg_score": 2.22
+  },
+  {
+   "band": "over 10 days late",
+   "orders": 287,
+   "bad_review_pct": 78.0,
+   "avg_score": 1.76
+  }
+ ],
+ "complaint_themes": [
+  {
+   "theme": "Delivery late or missing",
+   "comments": 602,
+   "share_pct": 62.1,
+   "base_comments": 970
+  },
+  {
+   "theme": "Seller or support contact",
+   "comments": 175,
+   "share_pct": 18.0,
+   "base_comments": 970
+  },
+  {
+   "theme": "Wrong or incomplete order",
+   "comments": 170,
+   "share_pct": 17.5,
+   "base_comments": 970
+  },
+  {
+   "theme": "Product quality or authenticity",
+   "comments": 102,
+   "share_pct": 10.5,
+   "base_comments": 970
+  }
+ ],
+ "brief": [
+  "Beauty is 12.2% of marketplace sales and grew every quarter from 2017Q1 to 2018Q2 (3.9x); the next 28 days are forecast with a weekly error of 25%.",
+  "Delivery decides satisfaction: if every late order had arrived on the promised day, about 440 of 1343 bad reviews (33%) would not have been written, and the average score would rise from 4.24 to 4.37.",
+  "Premium seekers are 21% of customers but 52% of spend: they deserve the best delivery promise.",
+  "Calling the riskiest 10% of delivered orders reaches 40% of future bad reviews before they are written."
+ ],
+ "what_if_promise_kept": {
+  "days_faster": 0,
+  "promise_kept_pct": 100,
+  "orders": 11666,
+  "bad_reviews_now": 1343,
+  "bad_reviews_new": 903,
+  "bad_reviews_avoided": 440,
+  "late_pct_now": 8.4,
+  "late_pct_new": 0.0,
+  "avg_score_now": 4.24,
+  "avg_score_new": 4.37
+ },
+ "segments": {
+  "k": 5,
+  "silhouette": {
+   "3": 0.31,
+   "4": 0.338,
+   "5": 0.349,
+   "6": 0.308
+  },
+  "repeat_rate_pct": 1.7,
+  "profile": [
+   {
+    "segment": "Premium seekers",
+    "customers": 2432,
+    "customer_share": 20.737,
+    "spend_share": 51.603,
+    "avg_spend": 352.052,
+    "unit_price": 299.99,
+    "items_per_order": 1.061,
+    "freight_ratio": 0.074,
+    "installments": 6.372,
+    "perfume_share": 0.156,
+    "repeat_rate": 0.019,
+    "avg_score": 4.201,
+    "late_rate": 0.095
+   },
+   {
+    "segment": "Everyday essentials",
+    "customers": 5121,
+    "customer_share": 43.665,
+    "spend_share": 27.782,
+    "avg_spend": 90.012,
+    "unit_price": 75.9,
+    "items_per_order": 1.064,
+    "freight_ratio": 0.214,
+    "installments": 2.223,
+    "perfume_share": 0.001,
+    "repeat_rate": 0.021,
+    "avg_score": 4.183,
+    "late_rate": 0.093
+   },
+   {
+    "segment": "Fragrance buyers",
+    "customers": 2339,
+    "customer_share": 19.944,
+    "spend_share": 16.144,
+    "avg_spend": 114.518,
+    "unit_price": 85.0,
+    "items_per_order": 1.049,
+    "freight_ratio": 0.166,
+    "installments": 2.781,
+    "perfume_share": 0.999,
+    "repeat_rate": 0.013,
+    "avg_score": 4.252,
+    "late_rate": 0.075
+   },
+   {
+    "segment": "Freight-sensitive small baskets",
+    "customers": 1686,
+    "customer_share": 14.376,
+    "spend_share": 2.459,
+    "avg_spend": 24.195,
+    "unit_price": 20.9,
+    "items_per_order": 1.083,
+    "freight_ratio": 0.622,
+    "installments": 1.556,
+    "perfume_share": 0.199,
+    "repeat_rate": 0.007,
+    "avg_score": 4.193,
+    "late_rate": 0.066
+   },
+   {
+    "segment": "Routine stockers",
+    "customers": 150,
+    "customer_share": 1.279,
+    "spend_share": 2.012,
+    "avg_spend": 222.573,
+    "unit_price": 39.55,
+    "items_per_order": 3.858,
+    "freight_ratio": 0.323,
+    "installments": 3.133,
+    "perfume_share": 0.212,
+    "repeat_rate": 0.02,
+    "avg_score": 3.616,
+    "late_rate": 0.081
+   }
+  ]
+ }
+}

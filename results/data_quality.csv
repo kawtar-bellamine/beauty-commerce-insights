@@ -1,0 +1,13 @@
+check,severity,description,rows_failing,rows_checked,failing_pct,status
+Q01,blocking,Duplicate order ids,0,99441,0.0,PASS
+Q02,blocking,Order items pointing to an unknown order,0,112650,0.0,PASS
+Q03,blocking,Order items pointing to an unknown product,0,112650,0.0,PASS
+Q04,warning,Products without a category,610,32951,1.851,WARN
+Q05,warning,Categories missing from the English translation table,2,73,2.74,WARN
+Q06,warning,Orders with more than one review (latest kept),547,98673,0.554,WARN
+Q07,warning,Delivered orders without a delivery date,8,96478,0.008,WARN
+Q08,blocking,Delivered before being purchased,0,99441,0.0,PASS
+Q09,warning,Handed to the carrier before payment approval,1359,99441,1.367,WARN
+Q10,warning,Orders where payments differ from items + freight by more than 1 BRL,313,98665,0.317,WARN
+Q11,warning,Orders without any payment record,1,99441,0.001,WARN
+Q12,blocking,Items with a non-positive price,0,112650,0.0,PASS

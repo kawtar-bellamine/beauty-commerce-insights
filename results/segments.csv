@@ -1,0 +1,6 @@
+segment,customers,customer_share,spend_share,avg_spend,unit_price,items_per_order,freight_ratio,installments,perfume_share,repeat_rate,avg_score,late_rate
+Premium seekers,2432,20.737,51.603,352.052,299.99,1.061,0.074,6.372,0.156,0.019,4.201,0.095
+Everyday essentials,5121,43.665,27.782,90.012,75.9,1.064,0.214,2.223,0.001,0.021,4.183,0.093
+Fragrance buyers,2339,19.944,16.144,114.518,85.0,1.049,0.166,2.781,0.999,0.013,4.252,0.075
+Freight-sensitive small baskets,1686,14.376,2.459,24.195,20.9,1.083,0.622,1.556,0.199,0.007,4.193,0.066
+Routine stockers,150,1.279,2.012,222.573,39.55,3.858,0.323,3.133,0.212,0.02,3.616,0.081

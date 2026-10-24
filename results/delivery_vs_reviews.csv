@@ -1,0 +1,6 @@
+band,orders,bad_review_pct,avg_score
+7+ days early,8709,7.5,4.41
+0 to 7 days early,1981,8.5,4.3
+1 to 3 days late,303,16.5,3.95
+4 to 10 days late,386,64.5,2.22
+over 10 days late,287,78.0,1.76

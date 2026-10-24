@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif}
+.b{width:var(--w);height:var(--h);position:relative;overflow:hidden;color:#fff;
+background:radial-gradient(900px 500px at 80% 0%,#8a3b63 0%,transparent 60%),linear-gradient(130deg,#151413 0%,#2e1d28 55%,#5a2843 100%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px}
+.txt{position:absolute;left:var(--pad);top:var(--top);width:var(--tw)}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f1c9db}
+.tag i{width:8px;height:8px;border-radius:50%;background:#e87ba4;box-shadow:0 0 0 4px rgba(232,123,164,.25)}
+h1{font-size:var(--h1);line-height:1.02;margin:14px 0 12px;font-weight:800;letter-spacing:-.03em}
+p{font-size:var(--p);line-height:1.4;color:#ead9e2;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.shot{position:absolute;right:var(--sr);top:var(--st);width:var(--sw);border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.15);transform:perspective(1600px) rotateY(-12deg) rotateX(3deg);transform-origin:left center}
+.kpi{position:absolute;left:var(--pad);bottom:var(--kb);display:flex;gap:28px}
+.kpi div{font-size:12.5px;color:#f1c9db}.kpi b{display:block;font-size:26px;color:#fff;font-weight:800}
+</style></head><body>
+<div class="b"><div class="dots"></div>
+<div class="txt"><div class="tag"><i></i>Python · SQL · DuckDB · LightGBM · Streamlit</div>
+<h1>Beauty Commerce Insights</h1>
+<p>A decision cockpit on real beauty e-commerce data: SQL warehouse, sales forecast, review-risk call list, what-if simulators and shopper personas.</p>
+<div class="chips"><span>Data engineering</span><span>Forecasting</span><span>Machine learning</span><span>What-if simulators</span></div></div>
+<div class="kpi"><div><b>11,986</b>real beauty orders</div><div><b>-20%</b>forecast error vs baseline</div><div><b>33%</b>bad reviews avoidable by keeping the delivery promise</div></div>
+<img class="shot" src="../docs/screenshots/hero.png">
+</div></body></html>
