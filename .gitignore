@@ -1,0 +1,4 @@
+data/raw/
+results/warehouse.duckdb
+__pycache__/
+.pytest_cache/
